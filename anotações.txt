@@ -1,0 +1,23 @@
+strlen 		= retorna a quantidade de caractéres
+stripos 	= retorna a primeira ocorrência
+strripos 	= retorna a última ocorrência
+strtolower 	= retorna a string em minusculo
+strtoupper 	= retorna a string em maiúsculo
+SUBSTR_COUNT 	= A quantidade de retornos diferenciando max e min.
+
+pow 		= Exponencial
+sqrt 		= raiz quadrada
+rand 		= número randomico
+abs 		= número abasoluto (Converte para positivo)
+
+is_numeric 	= testa se é um número
+is_int 		= testa se é um número inteiro
+is_float 	= testa se é um número fracionado
+
+round		= arredonda para média
+ceil		= arredonda para cima
+floor		= arredonda para baixo
+
+is_bool		= verifica se é boleana
+is_null		= verifica se é nula
+
