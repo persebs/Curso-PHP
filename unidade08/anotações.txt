@@ -1,0 +1,58 @@
+Para criar um Array, devemos fazer do seguinte modo:
+$nome = array("Rafael","Laura","Kaliane");
+A primeira posição de um array é zero.
+
+$nome[2] = "Rafael";
+
+Se você não coloca o número o PHP vai enteder que será adicionado ao final.
+
+Um Array pode conter multiplos tipos de valores
+
+$_carrinho = array(76, "Rafael", array(1, "Bolsa", 79.90));
+Você pode ter um array dentro de um array;
+echo $_carrinho[2][1];
+
+Quando você utilize a tag pre, você organiza a forma de ver o Array
+Para exibir o resultado devemos dar o print_r
+
+usar o comando sort coloca o Array em ordem crescente.
+sort($_megasena);
+Uma coisa interessante a se notar é que a ordem do Array também muda quando usamos o sort.
+
+Com Sort:
+
+(
+    [0] => 4
+    [1] => 21
+    [2] => 27
+    [3] => 29
+    [4] => 42
+    [5] => 47
+)
+
+Sem Sort
+
+(
+    [0] => 47
+    [1] => 29
+    [2] => 42
+    [3] => 4
+    [4] => 27
+    [5] => 21
+)
+  
+
+max = retorna o maior resultado do Array
+min = retorna o mínimo resultado do Array
+rsort = Retorna decrescente
+
+Para fazer pesquisa dentro de um array, devemos utilizar a função in_array
+Temos que colocar duas informações para fazer a pesquisa, sendo o primeiro o valor que quer procurar e o segundo o array.
+Se existir retorna o número 1
+
+Outro método de pesquisar é o array_search
+Ele retorna a posição do array quando encontrado.
+
+
+
+
