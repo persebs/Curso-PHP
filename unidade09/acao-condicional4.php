@@ -8,6 +8,12 @@
     <body>
         <?php 
 
+        $_fumante = true;
+        if ($_fumante != true) {
+            echo "Você não é fumante.";
+        } else{
+            echo "Você é fumante";
+        }
         ?>
     </body>
 </html>

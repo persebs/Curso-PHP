@@ -1,0 +1,102 @@
+If e Else
+
+Estrutura básica
+
+ <?php 
+            $_a = 15;
+            $_b = 15;
+
+            if( $_a > $_b){
+                echo "A é maior do que B";
+            } else if ($_a < $_b){ 
+                echo "A é menor do que B";
+            } else {
+                echo "A é igual a B";
+            }
+        ?>
+____________________
+
+Switch-case
+
+Substituto do if, porém ideal para várias comparações
+
+Criamos o switch e colocamos entre parenteses os valores que queremos testar.
+Ao invés de utilizarmos o ; utilizamos : ao final do deste
+Também colocamos o parâmetro break; para passar para o próximo case.
+Por final, podemos colocar default: para estabelecer um valor caso nenhuma das condições atendam.
+
+<?php 
+            $_dia = "Segunda";
+
+            switch ($_dia){
+
+                case "Sábado":
+                    echo "Hoje é segunda";
+                    break;
+                case "Terça":
+                    echo "Hoje é Terça";
+                    break;
+                case "Quarta":
+                    echo "Hoje é Quarta";
+                    break;
+                case "Quinta":
+                     echo "Hoje é Quinta";
+                    break;
+                case "Sexta":
+                    echo "Hoje é Quinta";
+                    break;
+                default:
+                    echo "É final de semana!";
+            }
+        ?>
+
+______________________
+
+Operador Ternário
+É um if else mais objetivo, mais rápido e mais específico.
+
+        <?php 
+            $_idade = 18;
+            $_maioridade = ($_idade >= 18) ? "De Maior" : "De menor";
+            echo "$_maioridade";
+        ?>
+
+_____________________
+Operadores lógicos
+
+Igual 			==
+Não é igual		!=
+Igual em valor e tipo	===
+Ou			||
+
+<?php 
+            $_dia = "sabado";
+
+            if ( $_dia == "sabado" || $_dia == "domingo"){
+                echo "Pode descansar";
+            }else{
+                echo "Dia de trabalho";
+            }
+        ?>
+
+
+E			&&
+
+        <?php 
+            $_idade = 18;
+            $_sexo = "feminino";
+
+
+            if ( $_idade >= 18 && $_sexo == "masculino"){
+                echo "Pode entrar";
+            }else{
+                echo "Não pode entrar";
+            }
+        ?>
+
+____________________________
+
+
+
+
+

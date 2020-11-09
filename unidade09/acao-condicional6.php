@@ -7,7 +7,15 @@
     </head>
     <body>
         <?php 
+            $_idade = 18;
+            $_sexo = "feminino";
 
+
+            if ( $_idade >= 18 && $_sexo == "masculino"){
+                echo "Pode entrar";
+            }else{
+                echo "Não pode entrar";
+            }
         ?>
     </body>
 </html>
