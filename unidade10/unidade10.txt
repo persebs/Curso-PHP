@@ -1,0 +1,123 @@
+While
+Declarar uma variável que é um contador.
+Primeiro faz o teste e depois executa a tarefa.
+
+    <?php                    
+        $_contador = 1;
+        while($_contador < 4){
+            echo "Teste "."$_contador"."<br>";
+            $_contador = $_contador + 1;
+        }
+    ?>
+
+    <?php                    
+        $_contador = 1;
+        while($_contador < 7){
+            $_sorteio = rand(1,60);
+            echo $_sorteio."<br>";
+            $_contador = $_contador + 1;
+        }
+    ?>
+____________________________________________________________
+Do While
+
+No Do While ele primeiro realiza o que tem que fazer e só depois ele faz o teste.
+
+    <?php                    
+        $_contador = 1;
+        do {
+            $_sorteio = rand(1,60);
+            echo $_sorteio."<br>";
+            $_contador = $_contador + 1; 
+        } while ($_contador < 6);
+    ?>
+
+____________________________________________________________
+
+For
+
+No for utilizamos três parâmetros:
+1º Definir variável do contador e valor inicial;
+2º Teste lógico;
+3º Incremento do contador;
+Abrimos e fechamos chaves e colocamos uma atividade a realizar.
+
+    <?php
+
+        for ($_contador=1; $_contador < 7 ; $_contador = $_contador + 1) { 
+            $_sorteio = rand(1,60);
+            echo $_sorteio."<br>";
+        }
+    ?>
+
+    <?php                    
+        $_salada = array("laranja","uva","abacate","limão","Manga");
+
+        for ($i=0; $i < count($_salada); $i++) { 
+            echo $_salada[$i]."<br>";
+        }
+    ?>
+
+Também podemos utilizar o contador para fazer uma contagem regressiva
+
+    <?php                    
+        for ($_contador = 7 ; $_contador > -10 ; $_contador --) {
+            $_sorteio = rand(1,60);
+            echo $_sorteio . " ";
+        }
+    ?>
+_____________________________________
+
+for each
+É um for para utilizarmos dentro de um objeto.
+
+    <?php                    
+        $_salada = array("laranja","uva","abacate","limão","Manga");
+
+        foreach ($_salada as $_frutas) {
+            echo $_frutas."<br>";
+        }
+        
+    ?>
+
+_____________________________________
+
+Array associativo
+
+Classificado por nome e não por indice.
+
+<?php                    
+        $_agenda = array("nome" => "Rafael",
+                        "telefone" => "98766-2198",
+                        "salario" => 5000.00            
+);
+        foreach ($_agenda as $_contatos => $_valores) {
+            echo $_contatos .": ". $_valores."<br>";
+        }
+    ?>
+
+_____________________________________
+
+Desafio
+
+Utilizamos o !in_array para verificar se o valor já existe dentro do array
+
+        <?php                    
+            $_megasena = array();
+            $_contador = 0;
+
+            while ($_contador < 6) {
+                $_sorteio = rand(1,60);
+
+                if(!in_array($_sorteio, $_megasena)){
+                    $_megasena[] = $_sorteio;
+                    echo $_megasena[$_contador]."<br>";
+                    $_contador++;
+                }
+
+
+            }
+            
+        ?>
+
+
