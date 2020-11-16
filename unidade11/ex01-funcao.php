@@ -5,8 +5,13 @@
     <title>CURSO PHP FUNDAMENTAL</title>
 </head>
 <body>
-    <?php 
-
+    <?php
+    
+    function retornarDiaria() {
+        return number_format(1902/30, 2);
+    }
+    echo retornarDiaria();
+    
     ?>
 </body>
 </html>

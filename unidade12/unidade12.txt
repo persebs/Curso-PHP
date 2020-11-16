@@ -1,0 +1,83 @@
+Trabalhando com datas
+
+Utilizar um array associativo (dia, mês, ano, dia do ano, dia da semana etc...)
+Para pegar a data utilizamos print_r
+
+        <?php
+            $_agora = getdate();
+            print_r($_agora);
+        ?>
+
+O GMT do PHP é diferente do nosso GMT. Desse moto utilizarmos o comando abaixo para corrigir a informação:
+        <?php
+            date_default_timezone_set('America/Bahia');
+            $_agora = getdate();
+            print_r($_agora);
+        ?>
+
+Para mostrar a hora utilizamos o comando abaixo:
+
+        <?php
+        // Determinar timezone
+            date_default_timezone_set('America/Bahia');
+            $_agora = getdate();
+
+        // criar elementos
+            $_segundo          = $_agora["seconds"];
+            $_minuto           = $_agora["minutes"];
+            $_hora             = $_agora["hours"];
+
+            $_dia               = $_agora["mday"];
+            $_mes               = $_agora["mon"];
+            $_ano               = $_agora["year"];
+
+        // mostra na tela
+
+            echo $_hora . ":" . $_minuto . ":" . $_segundo . " - " . $_dia . "/" . $_mes . "/" . $_ano;
+        ?>
+
+        Exemplo com nomes de meses e semanas por extenso
+
+                <?php
+            date_default_timezone_set('America/Bahia');
+            setlocale(LC_TIME, "portuguese");
+            $_agora = getdate();
+            
+            // criar elementos
+            $_segundo       = $_agora["seconds"];
+            $_minuto        = $_agora["minutes"];
+            $_hora          = $_agora["hours"];
+
+            $_dia           = $_agora["mday"];
+            $_mes           = strftime('%B');
+            $_ano           = $_agora["year"];
+
+            // mostrar na tela
+            echo $_hora . ":" . $_minuto . ":" . $_segundo . " - " . strftime('%A'). ", " . $_dia . " de " . $_mes . " de " . $_ano;
+        ?>
+________________________________________
+        DATEDIFF
+        Calcula o intervalo entre duas datas
+
+                <?php
+            $_data1 = new DateTime('2020-01-01');
+            $_data2 = new DateTime('2020-11-11');
+            $_intervalo = $_data1->diff($_data2);
+        ?>
+
+        <pre>
+
+            <?php
+                print_r($_intervalo);
+            ?>
+
+        </pre>
+
+        <pre>
+
+            <?php
+                 print_r($_intervalo->format('%a'));
+            ?>
+
+        </pre>
+

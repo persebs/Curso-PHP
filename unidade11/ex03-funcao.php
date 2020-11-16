@@ -6,7 +6,10 @@
 </head>
 <body>
     <?php 
-
+        function converterFC($_tempo){
+            return ($_tempo * 1.8) + 32;
+        }
+        echo converterFC(25);
     ?>
 </body>
 </html>

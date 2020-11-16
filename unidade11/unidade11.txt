@@ -1,0 +1,33 @@
+Estrutura da função:
+
+function calcularDecimoTerceiro(){
+    O que essa função vai executar
+}
+
+Interessante utilizar o método caseCamel para dar nome as funções.
+
+    <?php
+    
+    function retornarDiaria() {
+        return number_format(1902/30, 2);
+    }
+    echo retornarDiaria();
+    
+    ?>
+
+    O conceito de number_format retornar a quantidade de casas decimais após o número apresentado.
+
+    Dentro de uma função, você pode realizar chamadas para passar valores.
+
+    Exemplo:
+
+    <?php 
+        function retornarDiaria($_salario, $_dias) {
+            return number_format( $_salario/$_dias, 2);
+        }
+
+        echo retornarDiaria(2500, 30) . "<br>";
+        echo retornarDiaria(5000, 15) . "<br>";
+    ?>
+
+    
