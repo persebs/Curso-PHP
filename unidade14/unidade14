@@ -1,0 +1,14 @@
+O campo isset verifica se o valor está configurado
+
+Exemplo:
+
+        if (isset($_POST["nome"])){
+
+        $_nome = $_POST["nome"];
+
+        }else{
+        $_nome = "Sem definição";
+
+        }
+
+É possível fazer um if com isset para fazer um post no mesmo arquivo.
